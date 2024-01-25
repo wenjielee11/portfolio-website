@@ -4,7 +4,7 @@ export const STAR_MAX = 5.0
 
 export const HAZE_MAX = 50.0
 export const HAZE_MIN = 20.0
-export const HAZE_OPACITY = 0.09
+export const HAZE_OPACITY = 0.2
 
 export const BASE_LAYER = 0
 export const BLOOM_LAYER = 1
