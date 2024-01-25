@@ -13,6 +13,7 @@ const Star = ({position}) => {
   const texture = new THREE.TextureLoader().load("/textures/sprite120.png");
   const materials = starTypes.color.map((color) => new THREE.SpriteMaterial({ map: texture, color: color} )
   );
+  let starType; 
 
   const generateStarType = () =>{
     let num = Math.random()*100.0
@@ -27,7 +28,7 @@ const Star = ({position}) => {
         return 0
   }
   useEffect(() => {
-    const starType = generateStarType(); // Adapt generateStarType method from your file
+    starType = generateStarType(); // Adapt generateStarType method from your file
     const sprite = new THREE.Sprite(materials[starType]);
     sprite.layers.set(BLOOM_LAYER);
     sprite.scale.multiplyScalar(starTypes.size[starType])
@@ -40,7 +41,7 @@ const Star = ({position}) => {
   useFrame(() => {
     if (spriteRef.current) {
       let dist = position.distanceTo(camera.position) / 250;
-      let starSize = clamp(dist * starTypes.size[generateStarType()], STAR_MIN, STAR_MAX); // Assuming starType 0 for simplicity
+      let starSize = clamp(dist * starTypes.size[starType], STAR_MIN, STAR_MAX); // Assuming starType 0 for simplicity
       spriteRef.current.scale.set(starSize, starSize, starSize);
     }
   });
