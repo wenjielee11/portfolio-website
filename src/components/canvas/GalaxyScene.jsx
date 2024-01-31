@@ -34,7 +34,7 @@ export const Controls = ({ onAttach = () => {}, cameraProps, ...props }) => {
   useEffect(() => {
     const width = window.innerWidth
     const height = window.innerHeight
-    const containerWidth = 300
+    const containerWidth = 500
     camera.controls = controls.current
     camera.setViewOffset(width, height, -(containerWidth / 2), 0, width, height)
     camera.up.set(0, 0, 1);
@@ -141,7 +141,7 @@ export default function GalaxyScene() {
           rotateSpeed={0.3}
           dampingFactor={0.1}
           cameraProps={{
-            position: [0, 500, 500],
+            position: [200, 500, 500],
             near: 0.01,
             far: 10000,
           }}
