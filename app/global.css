@@ -46,3 +46,10 @@
   background: linear-gradient(30deg, #c850c0, #ffcc70);
   box-shadow: inset 0 0 12px #bf97ff70;
 }
+
+.cursor-pointer:hover {
+  text-shadow: 0 0 8px #c850c0,
+    0 0 10px #c850c0,
+    0 0 12px #ffcc70,
+    0 0 14px #ffcc70;
+}

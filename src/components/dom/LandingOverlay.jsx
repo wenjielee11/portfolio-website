@@ -13,7 +13,7 @@ const LandingOverlay = () => {
         let fadeOutTimeout = setTimeout(() => {
             setOpacity(0); // Start fading out
             setTimeout(() => setShowAlert(false), 500); // Remove the element after fade-out
-        }, 10000); // 5000ms total - 500ms for fade-out
+        }, 8000); // 5000ms total - 500ms for fade-out
 
         return () => {
             clearTimeout(fadeInTimeout);
@@ -38,7 +38,7 @@ const LandingOverlay = () => {
                 <div className="text-lg text-gray-400 my-5">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam recusandae, consequuntur molestiae doloribus deleniti architecto, odit, perspiciatis libero sint omnis ex! Totam sed sit blanditiis esse cumque maxime adipisci sunt.
                 </div>
-                <button className="py-2 pointer-events-auto button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]">
+                <button className="py-2 pointer-events-auto button-primary text-center text-white rounded-lg max-w-[200px]">
                     Learn More!
                 </button>
             </div>
