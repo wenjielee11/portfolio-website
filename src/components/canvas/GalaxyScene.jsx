@@ -67,7 +67,7 @@ export const Controls = ({ onAttach = () => {}, cameraProps, ...props }) => {
 const RendererSettings= ()=>{
   const {gl} = useThree();
   useEffect(() =>{
-    gl.setPixelRatio(window.devicePixelRatio);
+    gl.setPixelRatio(Math.max(window.devicePixelRatio, 2));
     gl.setSize(window.innerWidth, window.innerHeight);
     gl.outputColorSpace = THREE.SRGBColorSpace;
     gl.toneMapping = THREE.ACESFilmicToneMapping;

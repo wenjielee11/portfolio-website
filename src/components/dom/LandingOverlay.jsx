@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react'
 
-const LandingOverlay = () =>{
+const LandingOverlay = () => {
     const [showAlert, setShowAlert] = useState(true);
     const [opacity, setOpacity] = useState(0);
     // Automatically hide the alert after 5 seconds
@@ -23,20 +23,24 @@ const LandingOverlay = () =>{
     const Introduction = () => {
 
         return (
-            <div style={{ pointerEvents: 'none', position: 'absolute', top: '50%', left: '0%', transform: 'translateY(-50%)', maxWidth: '50%'}}>
+            <div className='welcome-container' style={{ pointerEvents: 'none', position: 'absolute', padding: '0 1em', top: '50%', left: '0%', transform: 'translateY(-60%)', maxWidth: '50%' }}>
                 <h1 style={{
                     margin: 0,
-                    padding: '0 1em',
-                    fontSize: '5em',
+                    fontSize: 'calc(2em + 3vw)',
                     fontWeight: 200,
                     letterSpacing: '0.05em',
-                    zIndex: 1000,
                     background: 'linear-gradient(30deg, #c850c0, #ffcc70)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                 }}>
-                    Hello, 
+                    Hello, <br></br>
                     I&apos;m Wen Jie.</h1>
+                <div className="text-lg text-gray-400 my-5">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam recusandae, consequuntur molestiae doloribus deleniti architecto, odit, perspiciatis libero sint omnis ex! Totam sed sit blanditiis esse cumque maxime adipisci sunt.
+                </div>
+                <button className="py-2 pointer-events-auto button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]">
+                    Learn More!
+                </button>
             </div>
         )
     }

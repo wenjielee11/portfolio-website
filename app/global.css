@@ -16,4 +16,33 @@
     padding: 0;
     overflow: hidden;
   }
+
+}
+
+@media (max-height: 500px) {
+  .welcome-container {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    /* Give some space from the top */
+    left: 50%;
+    transform: translate(-50%);
+    /* Only shift horizontally */
+    width: 50%;
+    /* Adjust width to prevent overflow */
+    max-width: 80vw;
+    /* Adjust max-width for smaller viewports */
+  }
+}
+
+.button-primary {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-color: linear-gradient(30deg, #c850c0, #ffcc70);
+  box-shadow: inset 0 0 12px #bf97ff3d;
+}
+
+.button-primary:hover {
+  background: linear-gradient(30deg, #c850c0, #ffcc70);
+  box-shadow: inset 0 0 12px #bf97ff70;
 }
