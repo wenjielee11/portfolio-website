@@ -23,7 +23,7 @@ function AboutMe() {
 
     With a flick of a finger, software deployed could instantly reach out to millions of people at once. My journey to fulfillment could have a substantial meaning. 
 
-    Coming to Wisconsin-madison, I have been looking for an employer that could fulfill my aspirations. It isn't just a platform to fork a bitstream of endless money, but m
+    Coming to Wisconsin-madison, I have been looking for an employer that could fulfill my aspirations. It isn't just a platform to fork a bitstream of endless money, but something for me to find purpose in.
     
     To me, at the end of the line, life has so much more meaning when you are leaving behind a legacy. Be it a child, your loved ones, your posessions, your world and your universe.
 
@@ -35,6 +35,7 @@ function AboutMe() {
 
     Lee.
     `
+    const imageStyle = "max-w-[30%] max-h-[30%] rounded-full"
     const description = descriptionText.split('\n').map((line, index) => (
         <React.Fragment key={index}>
             {line}
@@ -45,7 +46,7 @@ function AboutMe() {
         <div className="min-h-screen bg-left-top bg-repeat" style={{ backgroundImage: "url('/spacebackground.png')" }}>
             <div style={{ paddingTop: "15vh", justifyItems: "center" }}>
                 <div className=" px-10 h-full w-full flex justify-center items-center text-lg">
-                    <Card title={title} description={description} />
+                    <Card title={title} description={description} src={"/Biophoto.jpg"} imageStyle={imageStyle}/>
                 </div>
             </div>
         </div>

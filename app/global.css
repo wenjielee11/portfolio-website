@@ -31,7 +31,7 @@
     left: 50%;
     transform: translate(-50%);
     /* Only shift horizontally */
-    width: 50%;
+    width: 40%;
     /* Adjust width to prevent overflow */
     max-width: 80vw;
     /* Adjust max-width for smaller viewports */

@@ -1,4 +1,4 @@
-export const NUM_STARS = 1500
+export const NUM_STARS = 2000
 
 
 export const GALAXY_THICKNESS = 5

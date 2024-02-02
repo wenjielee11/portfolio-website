@@ -29,13 +29,13 @@ const LandingOverlay = () => {
                     fontSize: 'calc(2em + 3vw)',
                     fontWeight: 200,
                     letterSpacing: '0.05em',
-                    background: 'linear-gradient(30deg, #c850c0, #ffcc70)',
+                    background: 'linear-gradient(50deg, #c850c0, #ffcc70)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                 }}>
                     Hello, <br></br>
                     I&apos;m Wen Jie.</h1>
-                <div className="text-lg text-gray-400 my-5 max-width-40%">
+                <div className="text-lg text-gray-400 my-5 max-w-[50%]">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam recusandae, consequuntur molestiae doloribus deleniti architecto, odit, perspiciatis libero sint omnis ex! Totam sed sit blanditiis esse cumque maxime adipisci sunt.
                 </div>
                 <button className="py-2 pointer-events-auto button-primary text-center text-white rounded-lg max-w-[200px]">
