@@ -25,7 +25,7 @@ const LandingOverlay = () => {
         const router = useRouter();
 
         const handleClick = () => {
-            router.push('/about'); 
+            router.push('/about');
         };
         return (
             <div className='welcome-container' style={{ pointerEvents: 'none', position: 'absolute', padding: '0 1em', top: '50%', left: '0%', transform: 'translateY(-60%)', maxWidth: '50%' }}>
@@ -41,7 +41,7 @@ const LandingOverlay = () => {
                     Hello, <br></br>
                     I&apos;m Wen Jie.</h1>
                 <div className="text-lg text-gray-400 my-5 max-w-[50%]">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam recusandae, consequuntur molestiae doloribus deleniti architecto, odit, perspiciatis libero sint omnis ex! Totam sed sit blanditiis esse cumque maxime adipisci sunt.
+                    I am a Computer Science major in the University of Wisconsin-Madison, and a full-stack Software Engineer with experience in Website and Software Development. I enjoy all things space!
                 </div>
                 <button className="py-2 pointer-events-auto button-primary text-center text-white rounded-lg max-w-[200px]" onClick={handleClick}>
                     Learn More!
