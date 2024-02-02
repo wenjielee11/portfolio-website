@@ -1,6 +1,6 @@
+
 import Image from "next/image";
 import React from "react";
-import Link from "next/link";
 const Navbar = () => {
     return (
         <div className="w-full h-[65px] fixed top-0 shadow-lg bg-[#03001417] backdrop-blur-md z-50 px-10">
@@ -20,13 +20,13 @@ const Navbar = () => {
 
                 <div className="hidden md:w-[500px] md:flex md:flex-row md:items-center md:justify-between md:mr-20">
                     <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
-                        <a href="/" className="cursor-pointer">
+                        <a href="/About" className="cursor-pointer">
                             About me
                         </a>
-                        <a href="/" className="cursor-pointer">
+                        <a href="/Skills" className="cursor-pointer">
                             Skills
                         </a>
-                        <a href="/" className="cursor-pointer">
+                        <a href="/Projects" className="cursor-pointer">
                             Projects
                         </a>
                     </div>
