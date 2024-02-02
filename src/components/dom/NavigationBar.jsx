@@ -20,13 +20,13 @@ const Navbar = () => {
 
                 <div className="hidden md:w-[500px] md:flex md:flex-row md:items-center md:justify-between md:mr-20">
                     <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
-                        <a href="/About" className="cursor-pointer">
+                        <a href="/about" className="cursor-pointer">
                             About me
                         </a>
-                        <a href="/Skills" className="cursor-pointer">
+                        <a href="/skills" className="cursor-pointer">
                             Skills
                         </a>
-                        <a href="/Projects" className="cursor-pointer">
+                        <a href="/projects" className="cursor-pointer">
                             Projects
                         </a>
                     </div>
