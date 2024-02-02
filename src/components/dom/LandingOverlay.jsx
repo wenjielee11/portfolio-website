@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation';
 
 const LandingOverlay = () => {
     const [showAlert, setShowAlert] = useState(true);
@@ -21,7 +22,11 @@ const LandingOverlay = () => {
         };
     }, []);
     const Introduction = () => {
+        const router = useRouter();
 
+        const handleClick = () => {
+            router.push('/about'); 
+        };
         return (
             <div className='welcome-container' style={{ pointerEvents: 'none', position: 'absolute', padding: '0 1em', top: '50%', left: '0%', transform: 'translateY(-60%)', maxWidth: '50%' }}>
                 <h1 style={{
@@ -38,7 +43,7 @@ const LandingOverlay = () => {
                 <div className="text-lg text-gray-400 my-5 max-w-[50%]">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam recusandae, consequuntur molestiae doloribus deleniti architecto, odit, perspiciatis libero sint omnis ex! Totam sed sit blanditiis esse cumque maxime adipisci sunt.
                 </div>
-                <button className="py-2 pointer-events-auto button-primary text-center text-white rounded-lg max-w-[200px]">
+                <button className="py-2 pointer-events-auto button-primary text-center text-white rounded-lg max-w-[200px]" onClick={handleClick}>
                     Learn More!
                 </button>
             </div>
