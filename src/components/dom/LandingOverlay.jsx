@@ -31,6 +31,7 @@ const LandingOverlay = () => {
             <div className='welcome-container' style={{ pointerEvents: 'none', position: 'absolute', padding: '0 1em', top: '50%', left: '0%', transform: 'translateY(-60%)', maxWidth: '50%' }}>
                 <h1 style={{
                     margin: 0,
+                    marginTop: '2em',
                     fontSize: 'calc(2em + 3vw)',
                     fontWeight: 200,
                     letterSpacing: '0.05em',
