@@ -1,4 +1,4 @@
-export const NUM_STARS = 2000
+export const NUM_STARS = 1800
 
 
 export const GALAXY_THICKNESS = 5
@@ -16,4 +16,4 @@ export const ARM_Y_MEAN = 100
 export const SPIRAL = 3.0 // How strong the spiral is
 export const ARMS = 4.0 // Number of arms of spiral
 
-export const HAZE_RATIO = 0.5
+export const HAZE_RATIO = 0.4

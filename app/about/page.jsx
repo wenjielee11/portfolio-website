@@ -4,7 +4,7 @@ export default function Page() {
     return (
         <div className="overflow-x-scroll no-scrollbar">
             <>
-            <Navbar />
+                <Navbar />
             </>
             <AboutMe />
         </div>
