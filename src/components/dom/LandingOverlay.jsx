@@ -25,7 +25,7 @@ const LandingOverlay = () => {
         const router = useRouter();
 
         const handleClick = () => {
-            router.push('/about');
+            router.push('/projects');
         };
         return (
             <div className='welcome-container' style={{ pointerEvents: 'none', position: 'absolute', padding: '0 1em', top: '50%', left: '0%', transform: 'translateY(-60%)', maxWidth: '50%' }}>
