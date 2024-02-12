@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 
-const Card = ({ src, title, description, imageStyle }) => {
+const Card = ({ src, title, description, imageStyle, link }) => {
     
     return (
         <div className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] bg-[#03001417] backdrop-blur-md">
@@ -17,7 +17,15 @@ const Card = ({ src, title, description, imageStyle }) => {
             </div>
 
             <div className="relative p-4">
-                {title && <h1 className="text-2xl font-semibold text-white">{title}</h1>}
+                {title && (
+                    link ? (
+                        <a href={link} className="text-2xl font-semibold text-white hover:text-gray-300">
+                            {title}
+                        </a>
+                    ) : (
+                        <h1 className="text-2xl font-semibold text-white">{title}</h1>
+                    )
+                )}
                 {description && <div className="mt-2 text-gray-400">{description}</div>}
             </div>
         </div>

@@ -35,7 +35,7 @@ function AboutMe() {
 
     Lee.
     `
-    const imageStyle = "max-w-[30%] max-h-[30%] rounded-full"
+    const imageStyle = "max-w-[30%] max-h-[20%] rounded-full"
     const description = descriptionText.split('\n').map((line, index) => (
         <React.Fragment key={index}>
             {line}
@@ -46,7 +46,7 @@ function AboutMe() {
         <div className="min-h-screen bg-left-top bg-repeat" style={{ backgroundImage: "url('/spacebackground.png')" }}>
             <div style={{ paddingTop: "15vh", justifyItems: "center" }}>
                 <div className=" px-10 h-full w-full flex justify-center items-center text-lg">
-                    <Card title={title} description={description} src={"/Biophoto.jpg"} imageStyle={imageStyle}/>
+                    <Card title={title} description={description} src={"/Biophoto.jpg"} imageStyle={imageStyle} />
                 </div>
             </div>
         </div>

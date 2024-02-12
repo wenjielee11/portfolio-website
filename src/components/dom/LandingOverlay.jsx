@@ -27,25 +27,30 @@ const LandingOverlay = () => {
         const handleClick = () => {
             router.push('/projects');
         };
+        const handleResumeDownload = () => {
+            const resumeUrl = '/WenJieLee_Resume.pdf';
+            window.open(resumeUrl, '_blank');
+        };
         return (
-            <div className='welcome-container' style={{ pointerEvents: 'none', position: 'absolute', padding: '0 1em', top: '50%', left: '0%', transform: 'translateY(-60%)', maxWidth: '50%' }}>
+            <div className='welcome-container' style={{ pointerEvents: 'none', position: 'absolute', marginTop: '15vh', marginLeft: '3vw', top: '0%', left: '0%' }}>
                 <h1 style={{
-                    margin: 0,
-                    marginTop: '2em',
                     fontSize: 'calc(2em + 3vw)',
                     fontWeight: 200,
                     letterSpacing: '0.05em',
-                    background: 'linear-gradient(50deg, #c850c0, #ffcc70)',
+                    background: 'linear-gradient(170deg, #c850c0, #ffcc70)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                 }}>
                     Hello, <br></br>
                     I&apos;m Wen Jie.</h1>
-                <div className="text-lg text-gray-400 my-5 max-w-[50%]">
-                    I am a Computer Science major in the University of Wisconsin-Madison, and a full-stack Software Engineer with experience in Website and Software Development. I enjoy all things space!
+                <div className="text-lg text-gray-400 my-5 max-w-[30%]">
+                    I am a Computer Science student in the University of Wisconsin-Madison, and a full-stack Software Engineer with experience in Website and Software Development. Welcome to my Space!
                 </div>
                 <button className="py-2 pointer-events-auto button-primary text-center text-white rounded-lg max-w-[200px]" onClick={handleClick}>
                     Learn More!
+                </button>
+                <button className="mt-4 ml-5 py-2 pointer-events-auto button-primary text-center text-white rounded-lg max-w-[200px]" onClick={handleResumeDownload}>
+                    Download Resume
                 </button>
             </div>
         )
@@ -68,7 +73,7 @@ const LandingOverlay = () => {
                     color: "white",
                     transition: 'opacity 500ms ease-in-out'
                 }}>
-                    Zoom in and out for a better view!
+                    Pinch, pan and zoom for a better view!
                 </div>
             )}
         </>

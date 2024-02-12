@@ -1,6 +1,7 @@
 
 import Image from "next/image";
 import React from "react";
+import { Socials } from "@/helpers/info";
 const Navbar = () => {
     return (
         <div className="w-full h-[65px] fixed top-0 shadow-lg bg-[#03001417] backdrop-blur-md z-50 px-10">
@@ -18,7 +19,7 @@ const Navbar = () => {
                     </span>
                 </a>
 
-                <div className="hidden md:w-[500px] md:flex md:flex-row md:items-center md:justify-between md:mr-20">
+                <div className="hidden md:w-[400px] md:flex md:flex-row md:items-center md:justify-between">
                     <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
                         <a href="/" className="cursor-pointer">
                             Home
@@ -26,13 +27,13 @@ const Navbar = () => {
                         <a href="/about" className="cursor-pointer">
                             About me
                         </a>
-    
+
                         <a href="/projects" className="cursor-pointer">
                             Skills & Projects
                         </a>
                     </div>
                 </div>
-                {/* <div className="flex flex-row gap-5">
+                {<div className="flex flex-row gap-5">
                     {Socials.map((social) => (
                         <a href={social.link} className="cursor-pointer" target="_blank" key={social.name}>
                             <Image
@@ -44,7 +45,7 @@ const Navbar = () => {
                             />
                         </a>
                     ))}
-                </div> */}
+                </div>}
             </div>
         </div>
     );
