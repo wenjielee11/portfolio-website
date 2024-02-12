@@ -47,10 +47,10 @@ const LandingOverlay = () => {
                     I am a Computer Science student in the University of Wisconsin-Madison, and a full-stack Software Engineer with experience in Website and Software Development. Welcome to my Space!
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 md:gap-0 gap-4 md:max-w-[30%]'>
-                    <button className="py-2 pointer-events-auto button-primary text-center text-white md:text-gray-400 rounded-lg max-w-[150px]" onClick={handleClick}>
+                    <button className="py-2 pointer-events-auto button-primary text-center text-white md:text-gray-400 hover:text-white rounded-lg max-w-[150px]" onClick={handleClick}>
                         Learn More!
                     </button>
-                    <button className="py-2 pointer-events-auto button-primary text-center text-white md:text-gray-400 rounded-lg max-w-[200px]" onClick={handleResumeDownload}>
+                    <button className="py-2 pointer-events-auto button-primary text-center text-white md:text-gray-400 hover:text-white rounded-lg max-w-[200px]" onClick={handleResumeDownload}>
                         Download Resume
                     </button>
                 </div>

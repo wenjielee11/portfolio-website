@@ -55,7 +55,7 @@ export default function ProjectsSkills() {
             <h1 className="flex flex-col items-center justify-center text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
                 My Projects
             </h1>
-            <div className="h-full w-full grid grid-cols-1 md:grid-cols-3 gap-10 px-10 py-5">
+            <div className="h-full w-full grid grid-cols-1 md:grid-cols-2 gap-10 px-10 py-5">
                 {Projects.map((project, index) => (
                     <Card key={index} src={project.image} title={project.name} description={project.description} link={project.link} />
                 ))}
