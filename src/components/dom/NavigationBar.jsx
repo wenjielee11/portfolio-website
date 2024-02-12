@@ -70,7 +70,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Dropdown Menu */}
-            <div className={`${isMenuOpen ? "flex" : "hidden"} absolute md:hidden flex flex-col items-center top-full right-0 w-full shadow-lg bg-[#03001417] px-5 py-5`}
+            <div className={`${isMenuOpen ? "flex" : "hidden"} absolute md:hidden flex flex-col items-center top-full right-0 w-full shadow-lg bg-[#03001417] backdrop-blur-md px-5 py-5`}
                 style={{
                     backdropFilter: 'blur(20px)'
                 }}
