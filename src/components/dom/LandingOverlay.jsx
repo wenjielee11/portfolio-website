@@ -34,7 +34,7 @@ const LandingOverlay = () => {
         return (
             <div className='welcome-container' style={{ pointerEvents: 'none', position: 'absolute', marginTop: '15vh', marginLeft: '3vw', top: '0%', left: '0%' }}>
                 <h1 style={{
-                    fontSize: 'calc(2em + 3vw)',
+                    fontSize: 'calc(1em + 4vw)',
                     fontWeight: 200,
                     letterSpacing: '0.05em',
                     background: 'linear-gradient(170deg, #c850c0, #ffcc70)',
@@ -43,15 +43,17 @@ const LandingOverlay = () => {
                 }}>
                     Hello, <br></br>
                     I&apos;m Wen Jie.</h1>
-                <div className="text-lg text-gray-400 my-5 max-w-[30%]">
+                <div className="text-lg text-white md:text-gray-400 my-4 md:max-w-[30%]">
                     I am a Computer Science student in the University of Wisconsin-Madison, and a full-stack Software Engineer with experience in Website and Software Development. Welcome to my Space!
                 </div>
-                <button className="py-2 pointer-events-auto button-primary text-center text-white rounded-lg max-w-[200px]" onClick={handleClick}>
-                    Learn More!
-                </button>
-                <button className="mt-4 ml-5 py-2 pointer-events-auto button-primary text-center text-white rounded-lg max-w-[200px]" onClick={handleResumeDownload}>
-                    Download Resume
-                </button>
+                <div className='grid grid-cols-1 md:grid-cols-2 md:gap-0 gap-4 md:max-w-[30%]'>
+                    <button className="py-2 pointer-events-auto button-primary text-center text-white md:text-gray-400 rounded-lg max-w-[150px]" onClick={handleClick}>
+                        Learn More!
+                    </button>
+                    <button className="py-2 pointer-events-auto button-primary text-center text-white md:text-gray-400 rounded-lg max-w-[200px]" onClick={handleResumeDownload}>
+                        Download Resume
+                    </button>
+                </div>
             </div>
         )
     }
