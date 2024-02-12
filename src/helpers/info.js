@@ -114,7 +114,7 @@ export const Backend_skill = [
     },
     {
         skill_name: "Cassandra",
-        Image: "icons/Skills/Cassandra.png",
+        Image: "icons/Skills/cassandra.png",
         width: 100,
         height: 100,
     },
