@@ -34,7 +34,7 @@ const LandingOverlay = () => {
         return (
             <div className='welcome-container' style={{ pointerEvents: 'none', position: 'absolute', marginTop: '15vh', marginLeft: '3vw', top: '0%', left: '0%' }}>
                 <h1 style={{
-                    fontSize: 'calc(1em + 4vw)',
+                    fontSize: 'calc(4vh + 3.5vw)',
                     fontWeight: 200,
                     letterSpacing: '0.05em',
                     background: 'linear-gradient(170deg, #c850c0, #ffcc70)',
@@ -43,7 +43,7 @@ const LandingOverlay = () => {
                 }}>
                     Hello, <br></br>
                     I&apos;m Wen Jie.</h1>
-                <div className="text-lg text-white md:text-gray-400 my-4 md:max-w-[30%]">
+                <div className=" text-md md:text-lg text-white md:text-gray-400 my-4 md:max-w-[30%]">
                     I am a Computer Science student in the University of Wisconsin-Madison, and a full-stack Software Engineer with experience in Website and Software Development. Welcome to my Space!
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 md:gap-0 gap-4 md:max-w-[30%]'>

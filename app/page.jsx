@@ -9,10 +9,10 @@ import { useState, useEffect } from 'react'
 import LandingOverlay from '@/components/dom/LandingOverlay'
 import NavigationBar from '@/components/dom/NavigationBar'
 export default function Page() {
- let notRendered = true;
+  let notRendered = true;
   return (
     <>
-      <NavigationBar/>
+      <NavigationBar />
       <Canvas
         className="canvas"
         onCreated={({ gl, camera }) => {
@@ -23,7 +23,7 @@ export default function Page() {
       </Canvas>
       {notRendered = false}
       <LandingOverlay></LandingOverlay>
-      </>
-    
+    </>
+
   )
 }
