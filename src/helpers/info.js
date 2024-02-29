@@ -205,15 +205,16 @@ Our innovative work was recognized with the Best Agricultural Innovation Award a
         name: "College Database: A Red-Black Tree approach to stable O(log n) data storage operations",
         image: "/projects/college.jpg",
         description: `
-        This database utilizes Red-Black Trees for stable and efficient insertion, lookup, and deletion operations. It was aimed to
+        This database utilizes Red-Black Trees for stable and efficient insertion, lookup, and deletion operations written in Java. It was aimed to
 provide a streamlined and highly customizable platform for managing data on over 800 colleges.
 In a team of 4, I developed a CSV parsing module to extract and filter college data according to specified priorities during
 insertion.
 I also enhanced the database with the ability to perform dynamic lookups based on various data fields, including but not limited to
 rankings, student populations, and academic programs. 
-This was an exploratory approach to simulate a schema-less pseudo NoSql Database, 
+This was an exploratory (and bad) approach to simulate a schema-less pseudo NoSql Database, 
 by using Java reflection to retrieve values and data types during runtime, 
 and invoking its appropriate Comparable method. I also explored and implemented the O(log n) algorithm for deletion operations.
-        `
+        `,
+        link: "https://github.com/wenjielee11/CollegeDatabase"
     },
 ];
