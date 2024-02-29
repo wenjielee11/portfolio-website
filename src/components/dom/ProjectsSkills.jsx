@@ -59,11 +59,11 @@ export default function ProjectsSkills() {
                 {Projects.map((project, index) => (
                     <Card key={index} src={project.image} title={project.name} description={project.description} link={project.link} />
                 ))}
+                {/* <Card src={"/icons/android-icon-192x192.png"} title={"Test"} description={text} />
                 <Card src={"/icons/android-icon-192x192.png"} title={"Test"} description={text} />
                 <Card src={"/icons/android-icon-192x192.png"} title={"Test"} description={text} />
                 <Card src={"/icons/android-icon-192x192.png"} title={"Test"} description={text} />
-                <Card src={"/icons/android-icon-192x192.png"} title={"Test"} description={text} />
-                <Card src={"/icons/android-icon-192x192.png"} title={"Test"} description={text} />
+                <Card src={"/icons/android-icon-192x192.png"} title={"Test"} description={text} /> */}
             </div>
         </div>)
 }

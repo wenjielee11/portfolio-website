@@ -170,4 +170,50 @@ export const Projects = [
         Awarded Best use of Google Cloud by Major League Hacking (MLH) in MadHacks Fall 2023`,
         link: "https://devpost.com/software/cant-cer"
     },
+    {
+        name: "Cornucopia: Uniting Small-Scale Farmers With Community Supported Agriculture (CSA)",
+        image: "/projects/cornucopia.png",
+        description: `
+As the Full-Stack Developer for "Cornucopia," I played a role in creating a web application that connects small-scale farmers with local markets through a Community Supported Agriculture (CSA). 
+Utilizing React and Next.js, I crafted an intuitive interface with Tailwind CSS for easy navigation. 
+My key contributions included integrating a lasso regression model to recommend optimal crop prices, 
+employing MongoDB Atlas for real-time inventory and logistics management, and overcoming the team's web development learning curve by promoting parallel development, by leading the implementation of skeletal React component hierachies and state management. 
+It provided me a solid foundation as a first-time React user! Additionally, I enhanced user engagement by incorporating a Leaflet API-powered interactive map for efficient delivery logistics. 
+Our innovative work was recognized with the Best Agricultural Innovation Award at HACKUIOWA 2023.
+        `,
+        link: "https://github.com/nicosalm/cornucopia"
+    },
+    {
+        name: "Paper++: Redesigning Academia and Paper-based Code Examinations",
+        image: "/projects/paperplusplus.png",
+        description: `
+        For Paper++, I utilized the Google Cloud Vision API to transform handwritten code from images into compilable and executable programs, 
+        addressing a niche need in academic and professional settings. 
+        This system supports user programs with static dependencies, offering a seamless transition from paper to a digital platform of a remote code execution system. 
+        The project aims to streamline the grading process for paper-based code assessments and interviews.
+        I developed a Java backend to manage the automatic, thread-synced compilation and execution 
+        of these programs, integrating the outputs into a React-based UI. 
+        This project introduced me to leetcode's architecture with how I could improve Paper++ to become scalable. I hope to revisit this project and implement
+        a stateless architecture, using Docker compose for Boss-Worker nodes and load balancing.  
+        Our efforts were recognized at MadHacks 2023, 
+        where "Paper++" was ranked in the top 5 out of 58 projects, 
+        validating the project's potential to modernize the evaluation of coding skills.
+        `,
+        link: "https://devpost.com/software/paper-pm7okl"
+    },
+    {
+        name: "College Database: A Red-Black Tree approach to stable O(log n) data storage operations",
+        image: "/projects/college.jpg",
+        description: `
+        This database utilizes Red-Black Trees for stable and efficient insertion, lookup, and deletion operations. It was aimed to
+provide a streamlined and highly customizable platform for managing data on over 800 colleges.
+In a team of 4, I developed a CSV parsing module to extract and filter college data according to specified priorities during
+insertion.
+I also enhanced the database with the ability to perform dynamic lookups based on various data fields, including but not limited to
+rankings, student populations, and academic programs. 
+This was an exploratory approach to simulate a schema-less pseudo NoSql Database, 
+by using Java reflection to retrieve values and data types during runtime, 
+and invoking its appropriate Comparable method. I also explored and implemented the O(log n) algorithm for deletion operations.
+        `
+    },
 ];

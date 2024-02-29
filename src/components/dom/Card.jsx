@@ -26,7 +26,7 @@ const Card = ({ src, title, description, imageStyle, link }) => {
                         <h1 className="text-2xl font-semibold text-white">{title}</h1>
                     )
                 )}
-                {description && <div className="mt-2 text-gray-400">{description}</div>}
+                {description && <div className="mt-2 text-gray-300">{description}</div>}
             </div>
         </div>
     );
