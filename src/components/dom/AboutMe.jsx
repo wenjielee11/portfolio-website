@@ -5,7 +5,7 @@ function AboutMe() {
     let title = "About Me"
     let descriptionText = `My name is Wen Jie/Lee and I am currently a senior studying in the University of Wisconsin-Madison. My major is Computer Science. I speak 3 languages: English, Mandarin and Bahasa Malaysia. I am originally from Malaysia, but I currently reside in localhost:Wisconsin-Madison.
 
-    Raised in Malaysia, I consider myself fortunate to have been able to support and uplift those in need from a young age. My high school years were marked by significant involvement in volunteer work and leadership roles within various organizations. As the Divisional Chairman of St. John's Ambulance Malaysia, I led healthcare-focused initiatives, including charity drives, donation campaigns, first-aid duties and classes, and footdrill, among others. In my role as Vice President of the IT club, I organized Java programming lessons, which further honed my programming skills through extensive practice in extracurricular activities.
+    Raised in Malaysia, I consider myself fortunate to have been able to support and uplift those in need from a young age. My high school years were marked by significant involvement in volunteer work and leadership roles within various organizations. As the Divisional Chairman of St. John's Ambulance Malaysia, I led healthcare-focused initiatives, including charity drives, donation campaigns, first-aid duties and classes, and footdrill, among others. In my role as Vice President of the IT club, I organized Java programming lessons, which further honed my programming skills through extensive practice in extracurricular activities. I was also the President of Badminton Club, where I oversaw club operations, funds and biweekly curriculum to train atheletes who later got second place in our state-level badminton competitions!
     
     Growing up, my parents were pretty hands-off on how I should live: To live for the others, or to live for your own. At the age of 15, they told me that they had taught me everything there is, and that I should search for my own faith, for my own life and for my own system. It was honestly a difficult conversation for me. Finding myself in a universe of opportunities so broad, so vast and vague. 
     
@@ -19,7 +19,7 @@ function AboutMe() {
     
     And so I tried, I worked and I failed. I threw myself into extracurriculars hoping I could find my answer.
     
-    I built my division, my organization, I made tons of friends that I cherished to my heart--
+    I built my division, my organizations, I made tons of friends that I cherished to my heart--
     
     But it wasn't enough. 
 
