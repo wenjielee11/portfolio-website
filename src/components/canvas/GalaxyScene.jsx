@@ -4,7 +4,7 @@ import { useThree, extend, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
 
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import { OrbitControls, PerspectiveCamera, Text } from "@react-three/drei";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass";
@@ -132,6 +132,7 @@ export default function GalaxyScene() {
 
   return (
     <>
+
       <RendererSettings />
       <scene>
         <fogExp2 color={0xEBE2DB} density={0.00003} />

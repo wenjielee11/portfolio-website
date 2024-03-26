@@ -14,9 +14,8 @@ export default function Page() {
     <>
       <NavigationBar />
       <Canvas
-        dpr={ [1,2]}
         className="canvas"
-        onCreated={({ gl }) => {
+        onCreated={({ gl, camera }) => {
           gl.setClearColor(new THREE.Color('#020207'))
         }}
       >
