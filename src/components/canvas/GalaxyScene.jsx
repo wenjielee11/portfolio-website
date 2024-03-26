@@ -34,7 +34,7 @@ export const Controls = ({ onAttach = () => { }, cameraProps, ...props }) => {
 
   useEffect(() => {
     const width = size.width
-    const height =size.height
+    const height = size.height
     const containerWidth = 500
     camera.controls = controls.current
     camera.setViewOffset(width, height, -(containerWidth / 2), 0, width, height)
@@ -83,7 +83,7 @@ const Bloom = ({ children }) => {
   const overlayComposer = new EffectComposer(gl, new THREE.WebGLRenderTarget(size.width, size.height));
   const baseComposer = new EffectComposer(gl, new THREE.WebGLRenderTarget(size.width, size.height));
   const renderScene = new RenderPass(scene, camera);
-  const bloomPass = new UnrealBloomPass(new THREE.Vector2(size.width, size.height), 1.5, 0, 0.4);
+  const bloomPass = new UnrealBloomPass(new THREE.Vector2(size.width, size.height), 1.5, 0.4, 0.85);
   bloomPass.threshold = BLOOM_PARAMS.bloomThreshold
   bloomPass.strength = BLOOM_PARAMS.bloomStrength
   bloomPass.radius = BLOOM_PARAMS.bloomRadius
