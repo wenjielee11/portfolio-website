@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, useEffect} from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useThree, extend, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
@@ -21,7 +21,7 @@ const Galaxy = dynamic(() => import('./galaxy'), {
 });
 
 export const Controls = ({ onAttach = () => { }, cameraProps, ...props }) => {
-  const { camera } = useThree()
+  const { camera, size } = useThree()
   const controls = useRef()
 
 
@@ -33,8 +33,8 @@ export const Controls = ({ onAttach = () => { }, cameraProps, ...props }) => {
   })
 
   useEffect(() => {
-    const width = window.innerWidth
-    const height = window.innerHeight
+    const width = size.width
+    const height =size.height
     const containerWidth = 500
     camera.controls = controls.current
     camera.setViewOffset(width, height, -(containerWidth / 2), 0, width, height)
@@ -57,7 +57,7 @@ export const Controls = ({ onAttach = () => { }, cameraProps, ...props }) => {
       />
       <OrbitControls enableDamping
         autoRotate={true}
-        dampingFactor={0.1}
+        dampingFactor={0.3}
         screenSpaceSpanning={false}
         minDistance={1}
       />
@@ -66,10 +66,9 @@ export const Controls = ({ onAttach = () => { }, cameraProps, ...props }) => {
   )
 }
 const RendererSettings = () => {
-  const { gl } = useThree();
+  const { gl, size } = useThree();
   useEffect(() => {
-    gl.setPixelRatio(Math.max(window.devicePixelRatio, 2));
-    gl.setSize(window.innerWidth, window.innerHeight);
+    gl.setSize(size.width, size.height);
     gl.outputColorSpace = THREE.SRGBColorSpace;
     gl.toneMapping = THREE.ACESFilmicToneMapping;
     gl.toneMappingExposure = 0.5;
@@ -80,9 +79,9 @@ const RendererSettings = () => {
 
 const Bloom = ({ children }) => {
   const { gl, scene, camera, size } = useThree();
-  const bloomComposer = new EffectComposer(gl, new THREE.WebGLRenderTarget(window.innerWidth, window.innerHeight));
-  const overlayComposer = new EffectComposer(gl, new THREE.WebGLRenderTarget(window.innerWidth, window.innerHeight));
-  const baseComposer = new EffectComposer(gl, new THREE.WebGLRenderTarget(window.innerWidth, window.innerHeight));
+  const bloomComposer = new EffectComposer(gl, new THREE.WebGLRenderTarget(size.width, size.height));
+  const overlayComposer = new EffectComposer(gl, new THREE.WebGLRenderTarget(size.width, size.height));
+  const baseComposer = new EffectComposer(gl, new THREE.WebGLRenderTarget(size.width, size.height));
   const renderScene = new RenderPass(scene, camera);
   const bloomPass = new UnrealBloomPass(new THREE.Vector2(size.width, size.height), 1.5, 0, 0.4);
   bloomPass.threshold = BLOOM_PARAMS.bloomThreshold
@@ -129,7 +128,7 @@ const Bloom = ({ children }) => {
 
 
 export default function GalaxyScene() {
-  
+
 
   return (
     <>
