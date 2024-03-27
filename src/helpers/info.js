@@ -21,7 +21,7 @@ export const Socials = [
     {
         name: "Linkedin",
         src: "/icons/linkedin.png",
-        link: "https://linkedin.com/in/lee-wen-jie-042baa267",
+        link: "www.linkedin.com/in/wen-jie-lee-042baa267",
     },
     {
         name: "github",
