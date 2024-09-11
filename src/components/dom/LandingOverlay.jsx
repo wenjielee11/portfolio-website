@@ -45,7 +45,7 @@ const LandingOverlay = () => {
                     I&apos;m Wen Jie.</h1>
                 <div className=" text-md md:text-lg lg:text-lg text-white md:text-gray-400 my-4 md:max-w-[30%]">
                     I am a Computer Science student in the University of Wisconsin-Madison, an Undergraduate Research Assistant @ <a href='https://peopleandrobots.wisc.edu/' style={{pointerEvents:"auto"}}><u>The People and Robots Lab</u></a>,
-                    and a Full-Stack Software Engineer with experience in Website and Software Development. Welcome to my Space!
+                    and a <a href='https://www.linkedin.com/company/embedded-llm/' style={{pointerEvents:"auto"}}><u>Full-Stack Software Engineer</u></a> with experience in Website and Software Development. Welcome to my Space!
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 md:gap-0 gap-4 md:max-w-[30%]'>
                     <button className="py-2 pointer-events-auto button-primary text-center text-white md:text-gray-400 hover:text-white rounded-lg max-w-[150px]" onClick={handleClick}>
