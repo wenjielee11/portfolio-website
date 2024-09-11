@@ -19,7 +19,7 @@ export default function Page() {
           gl.setClearColor(new THREE.Color('#020207'))
         }}
       >
-        {notRendered && <GalaxyScene />}
+        {/* {notRendered && <GalaxyScene />} */}
       </Canvas>
       {notRendered = false}
       <LandingOverlay></LandingOverlay>
