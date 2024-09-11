@@ -35,7 +35,7 @@ const LandingOverlay = () => {
             <div className='welcome-container' style={{ pointerEvents: 'none', position: 'absolute', marginTop: '15vh', marginLeft: '3vw', top: '0%', left: '0%' }}>
                 <h1 style={{
                     fontSize: 'calc(4vh + 3.5vw)',
-                    fontWeight: 200,
+                    fontWeight: 'bold',
                     letterSpacing: '0.05em',
                     background: 'linear-gradient(170deg, #c850c0, #ffcc70)',
                     WebkitBackgroundClip: 'text',
