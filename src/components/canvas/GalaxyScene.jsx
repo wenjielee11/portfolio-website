@@ -50,6 +50,7 @@ export const Controls = ({ onAttach = () => {}, ...props }) => {
         ref={controls}
         enableDamping
         autoRotate={true}
+        autoRotateSpeed={0.3}
         dampingFactor={0.3}
         screenSpaceSpanning={false}
         minDistance={1}
