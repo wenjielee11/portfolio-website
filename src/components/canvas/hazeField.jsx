@@ -15,14 +15,17 @@ const vertexShader = `
   }
 `
 
+
 const fragmentShader = `
   varying float vOpacity;
   uniform sampler2D texture;
   
   void main() {
-    vec4 texColor = texture2D(texture, gl_PointCoord);
-    gl_FragColor = vec4(texColor.rgb, texColor.a * vOpacity);
-  }
+  vec2 uv = gl_PointCoord;
+  uv.y = 1.0 - uv.y; // Flip Y-axis if texture appears inverted
+  vec4 texColor = texture2D(texture, uv);
+  gl_FragColor = vec4(texColor.rgb, texColor.a * vOpacity);
+}
 `
 
 const HazeField = ({ positions }) => {
@@ -102,5 +105,6 @@ const HazeField = ({ positions }) => {
     </instancedMesh>
   )
 }
+
 
 export default HazeField
