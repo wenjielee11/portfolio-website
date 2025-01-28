@@ -1,16 +1,15 @@
-
+"use client"
 import * as THREE from 'three'
-
+import { Suspense, useEffect, useState } from 'react';
 import { ARMS, ARM_X_DIST, ARM_X_MEAN, ARM_Y_DIST, ARM_Y_MEAN, CORE_X_DIST, CORE_Y_DIST, GALAXY_THICKNESS, HAZE_RATIO, NUM_STARS, OUTER_CORE_X_DIST, OUTER_CORE_Y_DIST } from '../../helpers/config/galaxyConfig';
 import { gaussianRandom, spiral } from '../../helpers/utils.js';
-
 import dynamic from 'next/dynamic';
-import { useEffect, useState } from 'react';
 
-const Star = dynamic(() => import('./star'), {
+const StarField = dynamic(() => import('./starField').then(mod => mod.default), {
   ssr: false,
 });
-const Haze = dynamic(() => import('./haze'), {
+
+const Haze = dynamic(() => import('./haze').then(mod => mod.default), {
   ssr: false,
 });
 
@@ -75,15 +74,13 @@ const Galaxy = () => {
     setHaze(generateHaze());
   }, [])
   return (
-    <>
-    
-      {stars.map((pos, index) => (
-        <Star position={pos} key={index} />
-      ))}
-      {haze.map((pos, index) => (
+    <Suspense fallback={null}>
+      {stars.length > 0 && <StarField positions={stars} />}
+      {haze.length > 0 && haze.map((pos, index) => (
         <Haze position={pos} key={index} />
       ))}
-    </>
+    </Suspense>
   );
 };
+
 export default Galaxy;
