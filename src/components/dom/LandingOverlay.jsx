@@ -28,7 +28,7 @@ const LandingOverlay = () => {
             router.push('/projects');
         };
         const handleResumeDownload = () => {
-            const resumeUrl = '/WenJieLee_Resume.pdf';
+            const resumeUrl = '/WenJieLee_cResume.pdf';
             window.open(resumeUrl, '_blank');
         };
         return (
