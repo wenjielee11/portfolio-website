@@ -1,80 +1,91 @@
-"use client"
-import { useFrame, useThree } from '@react-three/fiber';
-import { useEffect, useMemo, useRef } from 'react';
-import * as THREE from 'three';
-import { starTypes } from '../../helpers/config/starDistribution.js';
+'use client'
+import { useFrame, useThree } from '@react-three/fiber'
+import { useEffect, useMemo, useRef } from 'react'
+import * as THREE from 'three'
+import { starTypes } from '../../helpers/config/starDistribution.js'
 import { BLOOM_LAYER, STAR_MAX, STAR_MIN } from '../../helpers/config/renderConfig.js'
-import { clamp } from '../../helpers/utils.js';
+import { clamp } from '../../helpers/utils.js'
 
 const StarField = ({ positions }) => {
-  const groupRef = useRef();
-  const { camera, scene } = useThree();
-  
-  const texture = useMemo(() => new THREE.TextureLoader().load("/textures/sprite120.png"), []);
-  const starGroups = useRef([]);
-  
-  const starTypeArray = useMemo(() => {
-    return positions.map(() => {
-      let num = Math.random() * 100.0;
-      let pct = starTypes.percentage;
-      for (let i = 0; i < pct.length; i++) {
-        num -= pct[i];
-        if (num < 0) return i;
+  const meshRefs = useRef([])
+  const { camera } = useThree()
+
+  const texture = useMemo(() => new THREE.TextureLoader().load('/textures/sprite120.png'), [])
+  const dummy = useMemo(() => new THREE.Object3D(), [])
+
+  const starsByType = useMemo(() => {
+    const groups = Array(starTypes.color.length)
+      .fill()
+      .map(() => [])
+    const typeCounts = new Array(starTypes.color.length).fill(0)
+
+    positions.forEach((pos) => {
+      let num = Math.random() * 100.0
+      for (let i = 0; i < starTypes.percentage.length; i++) {
+        num -= starTypes.percentage[i]
+        if (num < 0) {
+          groups[i].push(pos)
+          typeCounts[i]++
+          break
+        }
       }
-      return 0;
-    });
-  }, [positions]);
+    })
+    return groups
+  }, [positions])
 
   useEffect(() => {
-    // Create materials for each star type
-    const materials = starTypes.color.map(color => 
-      new THREE.SpriteMaterial({ 
-        map: texture, 
-        color: color,
-        transparent: true,
-        blending: THREE.AdditiveBlending,
-      })
-    );
-
-    // Group stars by type
-    const starsByType = positions.reduce((acc, pos, index) => {
-      const type = starTypeArray[index];
-      if (!acc[type]) acc[type] = [];
-      acc[type].push({ pos, type });
-      return acc;
-    }, {});
-
-    // Create sprites for each star type
-    Object.entries(starsByType).forEach(([type, stars]) => {
-      const group = new THREE.Group();
-      stars.forEach(({ pos }) => {
-        const sprite = new THREE.Sprite(materials[type]);
-        sprite.position.copy(pos);
-        sprite.scale.setScalar(starTypes.size[type]);
-        sprite.layers.set(BLOOM_LAYER);
-        group.add(sprite);
-      });
-      scene.add(group);
-      starGroups.current[type] = group;
-    });
-
-    return () => {
-      starGroups.current.forEach(group => scene.remove(group));
-    };
-  }, [positions, scene, texture]);
+    meshRefs.current.forEach((mesh) => {
+      if (mesh) {
+        mesh.layers.set(BLOOM_LAYER)
+        mesh.frustumCulled = false
+      }
+    })
+  }, [])
 
   useFrame(() => {
-    starGroups.current.forEach((group, typeIndex) => {
-      if (!group) return;
-      group.children.forEach((sprite) => {
-        const dist = sprite.position.distanceTo(camera.position) / 250;
-        const starSize = clamp(dist * starTypes.size[typeIndex], STAR_MIN, STAR_MAX);
-        sprite.scale.setScalar(starSize);
-      });
-    });
-  });
+    meshRefs.current.forEach((mesh, typeIndex) => {
+      if (!mesh || !starsByType[typeIndex]) return
 
-  return null;
-};
+      const baseSize = starTypes.size[typeIndex]
+      const positions = starsByType[typeIndex]
 
-export default StarField;
+      positions.forEach((pos, i) => {
+        const dist = pos.distanceTo(camera.position) / 250
+        const starSize = clamp(dist * baseSize, STAR_MIN, STAR_MAX)
+
+        dummy.position.copy(pos)
+        dummy.scale.setScalar(starSize)
+        dummy.rotation.copy(camera.rotation)
+        dummy.updateMatrix()
+        mesh.setMatrixAt(i, dummy.matrix)
+      })
+
+      mesh.instanceMatrix.needsUpdate = true
+    })
+  })
+
+  return (
+    <>
+      {starsByType.map(
+        (positions, index) =>
+          positions.length > 0 && (
+            <instancedMesh
+              key={index}
+              ref={(el) => (meshRefs.current[index] = el)}
+              args={[new THREE.PlaneGeometry(1, 1), null, positions.length]}
+            >
+              <meshBasicMaterial
+                map={texture}
+                color={starTypes.color[index]}
+                transparent
+                depthWrite={false}
+                blending={THREE.AdditiveBlending}
+              />
+            </instancedMesh>
+          ),
+      )}
+    </>
+  )
+}
+
+export default StarField
