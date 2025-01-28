@@ -12,8 +12,6 @@ export default function ProjectsSkills() {
             />
         )
     }
-    let text = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sint asperiores similique doloribus, suscipit libero, hic quia aut, minus odit incidunt iure nemo vero corporis natus architecto. Nobis, consequuntur nam!
-`
 
     return (
         <div className="min-h-screen bg-left-top bg-repeat  " style={{

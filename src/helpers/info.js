@@ -82,85 +82,104 @@ export const Frontend_skill = [
 ];
 
 export const Backend_skill = [
-    {
-        skill_name: "Next.js",
-        Image: "icons/Skills/next.png",
-        width: 80,
-        height: 80,
-    },
-    {
-        skill_name: "express",
-        Image: "icons/Skills/express.png",
-        width: 80,
-        height: 80,
-    },
-    {
-        skill_name: "Node js",
-        Image: "icons/Skills/node-js.png",
-        width: 80,
-        height: 80,
-    },
-    {
-        skill_name: "Google Cloud Platform",
-        Image: "icons/Skills/google-cloud.svg",
-        width: 80,
-        height: 80,
-    },
-    {
-        skill_name: "my SQL",
-        Image: "icons/Skills/mysql.png",
-        width: 80,
-        height: 80,
-    },
-    {
-        skill_name: "Cassandra",
-        Image: "icons/Skills/cassandra.png",
-        width: 100,
-        height: 100,
-    },
-    {
-        skill_name: "Kafka",
-        Image: "icons/Skills/Apache_kafka.png",
-        width: 100,
-        height: 100,
-    },
-    {
-        skill_name: "Apache Spark",
-        Image: "icons/Skills/spark.png",
-        width: 80,
-        height: 80,
-    },
-    {
-        skill_name: "Docker",
-        Image: "icons/Skills/docker.png",
-        width: 80,
-        height: 80,
-    },
-    {
-        skill_name: "Hadoop",
-        Image: "icons/Skills/hadoop.svg",
-        width: 80,
-        height: 80,
-    },
-    {
-        skill_name: "BigQuery",
-        Image: "icons/Skills/bigquery.svg",
-        width: 80,
-        height: 80,
-    },
-    {
-        skill_name: "MongoDB",
-        Image: "icons/Skills/mongodb.png",
-        width: 100,
-        height: 100,
-    },
-];
+  {
+    skill_name: 'LLama',
+    Image: 'icons/Skills/llama.svg',
+    width: 100,
+    height: 100,
+  },
+  {
+    skill_name: 'Next.js',
+    Image: 'icons/Skills/next.png',
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: 'express',
+    Image: 'icons/Skills/express.png',
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: 'Node js',
+    Image: 'icons/Skills/node-js.png',
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: 'Google Cloud Platform',
+    Image: 'icons/Skills/google-cloud.svg',
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: 'my SQL',
+    Image: 'icons/Skills/mysql.png',
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: 'Cassandra',
+    Image: 'icons/Skills/cassandra.png',
+    width: 100,
+    height: 100,
+  },
+  {
+    skill_name: 'Kafka',
+    Image: 'icons/Skills/Apache_kafka.png',
+    width: 100,
+    height: 100,
+  },
+  {
+    skill_name: 'Apache Spark',
+    Image: 'icons/Skills/spark.png',
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: 'Docker',
+    Image: 'icons/Skills/docker.png',
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: 'Hadoop',
+    Image: 'icons/Skills/hadoop.svg',
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: 'BigQuery',
+    Image: 'icons/Skills/bigquery.svg',
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: 'MongoDB',
+    Image: 'icons/Skills/mongodb.png',
+    width: 100,
+    height: 100,
+  },
+]
 
 export const Projects = [
-    {
-        name: "CanT-cer: Pioneering Skin Cancer Data Generation to Combat AI Bias",
-        image: "/projects/cantcer.jpg",
-        description: ` 
+  {
+    name: 'V-RAG: Video-based Retrieval Augmented Generation for Lifelike Conversational AI',
+    image: '/projects/v-rag.png',
+    description: `
+I designed a multimodal video-based Retrieval-Augmented Generation (RAG) pipeline to address a key challenge in traditional systems: the loss of context and visual detail during repetitive captioning stages. By integrating tools like VideoDB, LlamaIndex, Whisper, and VideoLLaVa into a microservices architecture, we created a system capable of delivering context-rich, visually-aware responses with incredible efficiency. One of our biggest achievements was achieving semantic retrievals in just 3 seconds for 20-second video clips using open-sourced LLMs.
+
+When designing the pipeline, I wanted to solve a problem on conventional multimodal RAG systems, which often lose vital visual details. To address that, my pipeline preserves and enhances context by enabling two-way, reversible video-to-text and text-to-video transformations. The workflow processes input videos to generate and query metadata, retrieves and resamples keyframes, and feeds this information into a language model to produce enriched responses. By simulating human-like memory encoding, storing visuals, sounds, and contextual details enables the pipeline to deliver more nuanced and adaptive interactions.
+
+This approach is especially impactful in healthcare, where lossless keyframe resampling ensures no critical visual detail is overlooked, making it invaluable for diagnostics and training. Reuniting with my team from the Cantcer project, we focused exclusively on open-source tools, showcasing how far open-source AI has come. Ultimately, this pipeline represents a step forward in creating lifelike, context-aware AI systems for healthcare, conversational assistants, and beyond.
+
+`,
+    link: 'https://devpost.com/software/v-rag',
+  },
+  {
+    name: 'CanT-cer: Pioneering Skin Cancer Data Generation to Combat AI Bias',
+    image: '/projects/cantcer.jpg',
+    description: ` 
         As the Fullstack developer, I helped develop a web app to address the need for synthetic medical datasets of diverse skin tones in cancer diagnosis, utilizing flask and Google Colab to deploy custom AI model pipelines for skin lesion classification, segmentation, and style transfer. 
         I also streamlined an Express RESTful API architecture to facilitate data transmission. 
         I implemented server-sided image encoding, file bundling and compression, enabling efficient exports of generated datasets in .ZIP format. 
@@ -168,12 +187,12 @@ export const Projects = [
         I also succesfully deployed the web service on Google Cloud App Engine. 
         Overall, it was a great learning experience for web development. 
         Awarded Best use of Google Cloud by Major League Hacking (MLH) in MadHacks Fall 2023`,
-        link: "https://devpost.com/software/cant-cer"
-    },
-    {
-        name: "Cornucopia: Uniting Small-Scale Farmers With Community Supported Agriculture (CSA)",
-        image: "/projects/cornucopia.png",
-        description: `
+    link: 'https://devpost.com/software/cant-cer',
+  },
+  {
+    name: 'Cornucopia: Uniting Small-Scale Farmers With Community Supported Agriculture (CSA)',
+    image: '/projects/cornucopia.png',
+    description: `
 As the Full-Stack Developer for "Cornucopia," I played a role in creating a web application that connects small-scale farmers with local markets through a Community Supported Agriculture (CSA). 
 Utilizing React and Next.js, I crafted an intuitive interface with Tailwind CSS for easy navigation. 
 My key contributions included integrating a lasso regression model to recommend optimal crop prices, 
@@ -181,12 +200,12 @@ employing MongoDB Atlas for real-time inventory and logistics management, and ov
 It provided me a solid foundation as a first-time React user! Additionally, I enhanced user engagement by incorporating a Leaflet API-powered interactive map for efficient delivery logistics. 
 Our innovative work was recognized with the Best Agricultural Innovation Award at HACKUIOWA 2023.
         `,
-        link: "https://github.com/nicosalm/cornucopia"
-    },
-    {
-        name: "Paper++: Redesigning Academia and Paper-based Code Examinations",
-        image: "/projects/paperplusplus.png",
-        description: `
+    link: 'https://github.com/nicosalm/cornucopia',
+  },
+  {
+    name: 'Paper++: Redesigning Academia and Paper-based Code Examinations',
+    image: '/projects/paperplusplus.png',
+    description: `
         For Paper++, I utilized the Google Cloud Vision API to transform handwritten code from images into compilable and executable programs, 
         addressing a niche need in academic and professional settings. 
         This system supports user programs with static dependencies, offering a seamless transition from paper to a digital platform of a remote code execution system. 
@@ -199,12 +218,12 @@ Our innovative work was recognized with the Best Agricultural Innovation Award a
         where "Paper++" was ranked in the top 5 out of 58 projects, 
         validating the project's potential to modernize the evaluation of coding skills.
         `,
-        link: "https://devpost.com/software/paper-pm7okl"
-    },
-    {
-        name: "College Database: A Red-Black Tree approach to stable O(log n) data storage operations",
-        image: "/projects/college.jpg",
-        description: `
+    link: 'https://devpost.com/software/paper-pm7okl',
+  },
+  {
+    name: 'College Database: A Red-Black Tree approach to stable O(log n) data storage operations',
+    image: '/projects/college.jpg',
+    description: `
         This database utilizes Red-Black Trees for stable and efficient insertion, lookup, and deletion operations written in Java. It was aimed to
 provide a streamlined and highly customizable platform for managing data on over 800 colleges.
 In a team of 4, I developed a CSV parsing module to extract and filter college data according to specified priorities during
@@ -215,6 +234,6 @@ This was an exploratory (and bad) approach to simulate a schema-less pseudo NoSq
 by using Java reflection to retrieve values and data types during runtime, 
 and invoking its appropriate Comparable method. I also explored and implemented the O(log n) algorithm for deletion operations.
         `,
-        link: "https://github.com/wenjielee11/CollegeDatabase"
-    },
-];
+    link: 'https://github.com/wenjielee11/CollegeDatabase',
+  },
+]
