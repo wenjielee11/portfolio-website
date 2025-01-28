@@ -10,7 +10,13 @@ const StarField = ({ positions }) => {
   const meshRefs = useRef([])
   const { camera } = useThree()
 
-  const texture = useMemo(() => new THREE.TextureLoader().load('/textures/sprite120.png'), [])
+  const texture = useMemo(() => {
+    const tex= new THREE.TextureLoader().load('/textures/sprite120.png')
+    tex.minFilter = THREE.LinearFilter; // Disable mipmapping for sharp sprites
+    tex.magFilter = THREE.LinearFilter;
+    tex.anisotropy = 4; // Or renderer.capabilities.getMaxAnisotropy()
+    return tex;
+}, [])
   const dummy = useMemo(() => new THREE.Object3D(), [])
 
   const starsByType = useMemo(() => {
